@@ -5,6 +5,8 @@ description = "Operate LEGO MINDSTORMS Inventor Hub from your computer"
 license = "MIT"
 authors = ["Noam Raphael"]
 readme = "README.md"
+homepage = "https://github.com/noamraph/mindstorms"
+repository = "https://github.com/noamraph/mindstorms"
 
 [tool.poetry.dependencies]
 python = "^3.8"

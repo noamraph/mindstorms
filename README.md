@@ -8,6 +8,11 @@ from a python shell on your computer, showing you completions and
 API documentation on the way. This also allows you to use the
 regular debugging facilities you're used to.
 
+The API mirrors that of the actual micropython API, so programs that run
+on the hub (and don't use callbacks) should run on your computer using this
+module and vice versa.
+
+
 The API documentation was copied from the official
 [LEGO MINDSTORMS Inventor Hub documentation](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/).
 
