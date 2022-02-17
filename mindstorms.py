@@ -28,7 +28,7 @@ class Hub:
 
         self.battery = Battery(self, 'hub.battery')
         self.bluetooth = Bluetooth(self, 'hub.bluetooth')
-        self.button = Buttons(self, 'hub.buttons')
+        self.button = Buttons(self, 'hub.button')
         self.display = Display(self, 'hub.display')
         self.motion = Motion(self, 'hub.motion')
         self.port = Ports(self, 'hub.port')
