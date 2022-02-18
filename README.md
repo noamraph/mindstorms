@@ -41,6 +41,31 @@ while True:
 
 Tap the hub, and hear it say "hello".
 
+## Easier usage of sensors using `spikedev`
+
+You can use Daniel Walton's `spikedev` for easier usage of the sensors,
+like this:
+
+```shell
+pip install git+https://github.com/noamraph/spikedev.git@sensor-support-cpython
+```
+
+```python
+>>> from mindstorms import *
+>>> from spikedev.sensor import *
+>>> hub = Hub()
+>>> color = ColorSensor(hub.port.D)
+>>> color.value()
+[0]
+>>> dist = DistanceSensor(hub.port.E)
+>>> dist.set_mode(DistanceSensorMode.DISTL)
+>>> dist.value()
+[58]
+```
+
+This currently relies on my pull-request. I hope it will be merged, and
+then you'll be able to use it directly from his repository.
+
 ## Notes
 
 The only missing classes from the official API are `hub.BT_VCP`
