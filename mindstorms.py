@@ -1196,6 +1196,19 @@ class Motor:
         """
         return self._hub._mcall(self._me, 'mode', *args, **kwargs)
 
+    def pwm(self, value: int) -> None:
+        """
+        Applies a PWM signal to the power pins of the port or device.
+
+        A PWM value of 0 has the same effect as float().
+
+        Parameters:
+        value – PWM value between -100 and +100. The polarity of the PWM signal
+        matches the sign of the value. A value of 0 stops the PWM signal and
+        leaves the port driver in the floating state.
+        """
+        return self._hub._mcall(self._me, 'pwm', value)
+
     def float(self) -> None:
         """
         Floats (coasts) the motor, as if disconnected from the hub.
